@@ -6,20 +6,19 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Import;
 
 @SpringBootApplication
-//@Import(WebConfig.class)
+// @Import(WebConfig.class)
 public class PosSalesApplication {
 
 	@Autowired
 	private EmailService senderService;
-	
+
 	public static void main(String[] args) {
 		SpringApplication.run(PosSalesApplication.class, args);
 	}
 
-//	@EventListener(ApplicationReadyEvent.class)
-//	public void sendMail() {
-//		senderService.sendResetEmail("trishajoyoballo@gmail.com", "");
-//	}
-
+	// @EventListener(ApplicationReadyEvent.class)
+	// public void sendMail() {
+	// senderService.sendResetEmail("trishajoyoballo@gmail.com", "");
+	// }
 
 }
