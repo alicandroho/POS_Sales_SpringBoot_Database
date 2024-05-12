@@ -17,7 +17,7 @@ import java.util.UUID;
 
 @RestController
 @RequestMapping("/user")
-@CrossOrigin("https://dilven.vercel.app")
+@CrossOrigin("https://pos-sales-management-react.vercel.app/")
 public class AccountsController {
 
 	@Autowired
