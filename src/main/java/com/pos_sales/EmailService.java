@@ -14,7 +14,6 @@ public class EmailService {
     @Autowired
     private JavaMailSender javaMailSender;
 
-
     public void sendResetEmail(String toEmail, String resetToken) {
         MimeMessage message = javaMailSender.createMimeMessage();
         MimeMessageHelper helper = new MimeMessageHelper(message);
@@ -22,10 +21,13 @@ public class EmailService {
         try {
             helper.setTo(toEmail);
             helper.setSubject("Password Reset");
-            helper.setText("<p>Click <a href='https://dilven-springboot.onrender.com/forgotpassword?token=" + resetToken + "'>this link</a> to reset your password</p>", true);
+            helper.setText(
+                    "<p>Click <a href='https://pos-sales-management-react.vercel.app/forgotpassword?token=" + resetToken
+                            + "'>this link</a> to reset your password</p>",
+                    true);
 
             javaMailSender.send(message);
-            
+
             System.out.println("Mail sent successfully...");
         } catch (MessagingException e) {
             e.printStackTrace();

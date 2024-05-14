@@ -189,7 +189,7 @@ public class AccountsController {
 			helper.setTo(toEmail);
 			helper.setSubject("Password Reset");
 			helper.setText(
-					"<p>Click <a href='https://dilven.vercel.app/changepassword?token=" + resetToken
+					"<p>Click <a href='https://pos-sales-management-react.vercel.app/changepassword?token=" + resetToken
 							+ "'>this link</a> to reset your password</p>  <p> This link will expire in 24 hours.",
 					true);
 
@@ -207,7 +207,7 @@ public class AccountsController {
 		return UUID.randomUUID().toString();
 	}
 
-	// @CrossOrigin(origins = "https://dilven.vercel.app")
+	// @CrossOrigin(origins = "https://pos-sales-management-react.vercel.app")
 	// Update a record
 	@PutMapping("/changepassword")
 	public AccountsModel ChangePassword(@RequestParam String resetToken, @RequestBody AccountsModel newAccountsDetails)

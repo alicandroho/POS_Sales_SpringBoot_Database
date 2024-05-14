@@ -10,7 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/product")
-@CrossOrigin(origins = "https://localhost:3000")
+@CrossOrigin(origins = "https://pos-sales-management-react.vercel.app")
 public class ProductController {
 
 	@Autowired
