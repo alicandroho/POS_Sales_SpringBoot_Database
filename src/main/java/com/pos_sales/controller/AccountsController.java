@@ -135,10 +135,10 @@ public class AccountsController {
 			// Successful authentication
 			if ("Administrator".equals(user.getAccount_type())) {
 				// Return user object for successful admin login
-				return new ResponseEntity<>("Access denied for this account type", HttpStatus.FORBIDDEN);
+				return new ResponseEntity<>(user, HttpStatus.OK);
 			} else {
 				// Deny access for other account types
-				return new ResponseEntity<>(user, HttpStatus.OK);
+				return new ResponseEntity<>("Access denied for this account type", HttpStatus.FORBIDDEN);
 			}
 		} else {
 			// Handle invalid credentials
