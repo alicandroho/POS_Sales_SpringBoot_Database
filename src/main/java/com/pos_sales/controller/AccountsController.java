@@ -18,30 +18,7 @@ import java.util.UUID;
 
 @RestController
 @RequestMapping("/user")
-@CrossOrigin("https://pos-sales-management-react.vercel.app")
-public class AccountsController {
-
-		package com.pos_sales.controller;
-
-import com.pos_sales.model.AccountsModel;
-import com.pos_sales.service.AccountsService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.mail.javamail.JavaMailSender;
-import org.springframework.mail.javamail.MimeMessageHelper;
-import org.springframework.web.bind.annotation.*;
-
-import javax.mail.MessagingException;
-import javax.mail.internet.MimeMessage;
-import java.time.LocalDateTime;
-import java.util.List;
-import java.util.UUID;
-
-
-@RestController
-@RequestMapping("/user")
-@CrossOrigin("https://pos-sales-management-react.vercel.app")
+@CrossOrigin("https://pos-sales-management-react.vercel.app/")
 public class AccountsController {
 
 		@Autowired
