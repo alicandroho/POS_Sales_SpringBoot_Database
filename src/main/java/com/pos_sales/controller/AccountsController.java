@@ -21,6 +21,29 @@ import java.util.UUID;
 @CrossOrigin("https://pos-sales-management-react.vercel.app")
 public class AccountsController {
 
+		package com.pos_sales.controller;
+
+import com.pos_sales.model.AccountsModel;
+import com.pos_sales.service.AccountsService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.mail.javamail.MimeMessageHelper;
+import org.springframework.web.bind.annotation.*;
+
+import javax.mail.MessagingException;
+import javax.mail.internet.MimeMessage;
+import java.time.LocalDateTime;
+import java.util.List;
+import java.util.UUID;
+
+
+@RestController
+@RequestMapping("/user")
+@CrossOrigin("https://pos-sales-management-react.vercel.app")
+public class AccountsController {
+
 		@Autowired
 		AccountsService aserv;
 
@@ -187,7 +210,7 @@ public class AccountsController {
 				    try {
 				        helper.setTo(toEmail);
 				        helper.setSubject("Password Reset");
-				        helper.setText("<p>Click <a href='https://dilven.vercel.app/changepassword?token=" + resetToken + "'>this link</a> to reset your password</p>  <p> This link will expire in 24 hours.", true);
+				        helper.setText("<p>Click <a href='https://pos-sales-management-react.vercel.app/changepassword?token=" + resetToken + "'>this link</a> to reset your password</p>  <p> This link will expire in 24 hours.", true);
 
 				        javaMailSender.send(message);
 				        
