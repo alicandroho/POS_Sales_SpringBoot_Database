@@ -1,24 +1,5 @@
     package com.pos_sales;
 
-    //    @Configuration
-//    public class CORSFilter {
-//
-//        @Bean
-//        public WebMvcConfigurer corsConfigurer() {
-//            return new WebMvcConfigurer() {
-//                @Override
-//                public void addCorsMappings(CorsRegistry registry) {
-//                    registry.addMapping("*")
-//                            .allowedOrigins("https://dilven.vercel.app")
-//                            .allowedMethods("GET", "POST", "PUT", "DELETE")
-//                            .allowedHeaders("*")
-//                            .allowCredentials(true);
-//                }
-//            };
-//        }
-//    }
-
-
     import org.springframework.stereotype.Component;
 
     import javax.servlet.*;
