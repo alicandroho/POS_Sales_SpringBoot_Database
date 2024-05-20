@@ -25,8 +25,7 @@ public class ProductModel {
     public ProductModel() {
     }
 
-    public ProductModel(int productid, String productname, int quantity, double price, int purchaseCount,
-            String business) {
+    public ProductModel(int productid, String productname, int quantity, double price, int purchaseCount, String business) {
         this.productid = productid;
         this.productname = productname;
         this.quantity = quantity;
@@ -39,7 +38,6 @@ public class ProductModel {
     public List<AccountsModel> getAccounts() {
         return accounts;
     }
-
     public String getBusiness() {
         return business;
     }
