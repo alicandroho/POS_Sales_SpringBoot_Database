@@ -11,7 +11,7 @@ import java.util.List;
 
 
 @RestController
-@CrossOrigin("https://pos-sales-management-react.vercel.app")
+@CrossOrigin(origins = "https://pos-sales-management-react.vercel.app")
 @RequestMapping("/transaction")
 public class TransactionController {
 
